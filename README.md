@@ -22,9 +22,10 @@ To launch smoke test run (it checks code workability):
 ```
 python generation/test_main.py
 ```
+If console write: "Torch not complied with CUDA enabled" Then add --device cpu
 If previous test is OK, launch test, which compare FIRST result image with checking ones, they must be the same (enter the path to first generated image):
 ```
-python generation/test_result_image.py <result-image-path>
+python generation/test_result_image.py --result-image-path <your-path>
 ```
 ## Evaluating
 To launch evaluating and generate more images run (to make it faster, just 15-30 seconds, don't enter --num-steps > 100):
