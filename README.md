@@ -18,12 +18,16 @@ Install requirements (manually is also possible):
 python -m pip install -r requirements.txt
 ```
 ## Testing
-To launch smoke test run (check it on runtime errors):
+To launch smoke test run (it checks code workability):
 ```
-generation/test_main.py
+python generation/test_main.py
 ```
-If previous test is OK, launch test, which compare result image with checking ones
+If previous test is OK, launch test, which compare FIRST result image with checking ones, they must be the same (enter the path to first generated image):
+```
+python generation/test_result_image.py <result-image-path>
+```
 ## Evaluating
+To launch evaluating and generate more images run (don't enter --num-steps > 100, or you will have to wait):
 ```
-
+python generation/main.py --root images/balloons.png --evaluation --model-to-load results/g_multivanilla.pt --amps-to-load results/amps.pt --num-steps <enter num of images to generate> --batch-size 1
 ```
