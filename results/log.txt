@@ -1,0 +1,187 @@
+2022-04-16 16:07:17 - INFO - Namespace(adversarial_weight=1.0, amps_to_load='', batch_size=1, crop_size=0, device='cuda', device_ids=[0], dis_betas=[0.5, 0.9], dis_model='d_vanilla', eval_every=100, evaluation=False, gamma=0.1, gen_betas=[0.5, 0.9], gen_model='g_multivanilla', kernel_size=3, lr=0.0005, max_features=32, max_size=250, min_features=32, min_size=25, model_to_load='', noise_weight=0.1, num_blocks=5, num_critic=1, num_steps=2000, padding=0, penalty_weight=0.1, print_every=200, reconstruction_weight=10.0, results_dir='./results', root='images/balloons.png', save='2022-04-16_16-07-17', save_path='./results\\2022-04-16_16-07-17', scale_factor_init=0.75, seed=2316, step_size=2000, use_tb=False)
+2022-04-16 16:07:22 - INFO - MultiVanilla(
+  (curr): Vanilla(
+    (features): Sequential(
+      (0): BasicBlock(
+        (conv): Conv2d(3, 32, kernel_size=(3, 3), stride=(1, 1))
+        (batch_norm): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (lrelu): LeakyReLU(negative_slope=0.2, inplace=True)
+      )
+      (1): BasicBlock(
+        (conv): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1))
+        (batch_norm): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (lrelu): LeakyReLU(negative_slope=0.2, inplace=True)
+      )
+      (2): BasicBlock(
+        (conv): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1))
+        (batch_norm): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (lrelu): LeakyReLU(negative_slope=0.2, inplace=True)
+      )
+      (3): BasicBlock(
+        (conv): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1))
+        (batch_norm): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (lrelu): LeakyReLU(negative_slope=0.2, inplace=True)
+      )
+    )
+    (features_to_image): Sequential(
+      (0): Conv2d(32, 3, kernel_size=(3, 3), stride=(1, 1))
+      (1): Tanh()
+    )
+  )
+  (prev): Module()
+)
+2022-04-16 16:07:22 - INFO - Vanilla(
+  (features): Sequential(
+    (0): BasicBlock(
+      (conv): Conv2d(3, 32, kernel_size=(3, 3), stride=(1, 1))
+      (batch_norm): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (lrelu): LeakyReLU(negative_slope=0.2, inplace=True)
+    )
+    (1): BasicBlock(
+      (conv): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1))
+      (batch_norm): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (lrelu): LeakyReLU(negative_slope=0.2, inplace=True)
+    )
+    (2): BasicBlock(
+      (conv): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1))
+      (batch_norm): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (lrelu): LeakyReLU(negative_slope=0.2, inplace=True)
+    )
+    (3): BasicBlock(
+      (conv): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1))
+      (batch_norm): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (lrelu): LeakyReLU(negative_slope=0.2, inplace=True)
+    )
+  )
+  (classifier): Conv2d(32, 1, kernel_size=(3, 3), stride=(1, 1))
+)
+2022-04-16 16:07:22 - INFO - Number of parameters in generator: 29763
+2022-04-16 16:07:22 - INFO - Number of parameters in discriminator: 29185
+2022-04-16 16:07:22 - INFO - 
+Scale #1
+2022-04-16 16:07:23 - INFO - Iteration 0, D: 0.005353, D_r: -0.002982, D_f: -0.021816, D_gp: 0.301513, G: 1.64311, G_recon: 0.15817, G_adv: 0.06141
+2022-04-16 16:07:34 - INFO - Iteration 200, D: -1.063730, D_r: -0.891559, D_f: -0.690094, D_gp: 5.179239, G: 0.89520, G_recon: 0.01161, G_adv: 0.77914
+2022-04-16 16:07:45 - INFO - Iteration 400, D: -1.502358, D_r: -0.668005, D_f: -1.137181, D_gp: 3.028270, G: 1.21098, G_recon: 0.00740, G_adv: 1.13697
+2022-04-16 16:07:57 - INFO - Iteration 600, D: -0.640906, D_r: 0.881821, D_f: -2.104956, D_gp: 5.822294, G: 2.23555, G_recon: 0.01051, G_adv: 2.13049
+2022-04-16 16:08:08 - INFO - Iteration 800, D: -2.190003, D_r: -0.073026, D_f: -2.478440, D_gp: 3.614625, G: 2.77043, G_recon: 0.00634, G_adv: 2.70705
+2022-04-16 16:08:19 - INFO - Iteration 1000, D: -1.374472, D_r: 0.051577, D_f: -2.591412, D_gp: 11.653626, G: 2.81948, G_recon: 0.00770, G_adv: 2.74250
+2022-04-16 16:08:31 - INFO - Iteration 1200, D: -2.289013, D_r: 0.186384, D_f: -3.414314, D_gp: 9.389170, G: 3.62474, G_recon: 0.00852, G_adv: 3.53952
+2022-04-16 16:08:42 - INFO - Iteration 1400, D: -1.420664, D_r: 0.280940, D_f: -3.196098, D_gp: 14.944933, G: 3.22005, G_recon: 0.00579, G_adv: 3.16214
+2022-04-16 16:08:53 - INFO - Iteration 1600, D: -1.175216, D_r: 1.358896, D_f: -3.466178, D_gp: 9.320659, G: 3.59426, G_recon: 0.00607, G_adv: 3.53353
+2022-04-16 16:09:04 - INFO - Iteration 1800, D: -1.434677, D_r: 1.093001, D_f: -3.182629, D_gp: 6.549505, G: 3.20783, G_recon: 0.00505, G_adv: 3.15731
+2022-04-16 16:09:16 - INFO - Iteration 2000, D: -1.655979, D_r: 1.079456, D_f: -3.714160, D_gp: 9.787247, G: 3.83926, G_recon: 0.00530, G_adv: 3.78623
+2022-04-16 16:09:16 - INFO - 
+Scale #2
+2022-04-16 16:09:16 - INFO - Iteration 0, D: -0.440003, D_r: 2.546602, D_f: -3.672948, D_gp: 6.863424, G: 4.56417, G_recon: 0.08561, G_adv: 3.70808
+2022-04-16 16:09:32 - INFO - Iteration 200, D: -0.608506, D_r: 2.099268, D_f: -3.055214, D_gp: 3.474390, G: 3.15581, G_recon: 0.00687, G_adv: 3.08712
+2022-04-16 16:09:48 - INFO - Iteration 400, D: -0.643903, D_r: 1.954417, D_f: -2.875246, D_gp: 2.769256, G: 3.01345, G_recon: 0.00414, G_adv: 2.97203
+2022-04-16 16:10:03 - INFO - Iteration 600, D: -0.561773, D_r: 2.028508, D_f: -2.954799, D_gp: 3.645185, G: 3.07084, G_recon: 0.00461, G_adv: 3.02476
+2022-04-16 16:10:18 - INFO - Iteration 800, D: -0.610221, D_r: 2.091309, D_f: -2.913246, D_gp: 2.117170, G: 2.99223, G_recon: 0.00559, G_adv: 2.93636
+2022-04-16 16:10:34 - INFO - Iteration 1000, D: -0.767380, D_r: 1.963515, D_f: -2.978335, D_gp: 2.474397, G: 3.08945, G_recon: 0.00477, G_adv: 3.04175
+2022-04-16 16:10:49 - INFO - Iteration 1200, D: -0.927874, D_r: 2.183128, D_f: -3.377430, D_gp: 2.664276, G: 3.40672, G_recon: 0.00335, G_adv: 3.37320
+2022-04-16 16:11:04 - INFO - Iteration 1400, D: -0.548666, D_r: 2.449358, D_f: -3.324012, D_gp: 3.259880, G: 3.42989, G_recon: 0.00352, G_adv: 3.39468
+2022-04-16 16:11:19 - INFO - Iteration 1600, D: -0.532441, D_r: 2.485321, D_f: -3.745755, D_gp: 7.279928, G: 3.84198, G_recon: 0.00294, G_adv: 3.81255
+2022-04-16 16:11:34 - INFO - Iteration 1800, D: -0.738886, D_r: 2.963196, D_f: -3.934464, D_gp: 2.323831, G: 3.96379, G_recon: 0.00337, G_adv: 3.93010
+2022-04-16 16:11:50 - INFO - Iteration 2000, D: -0.681078, D_r: 2.647439, D_f: -3.728661, D_gp: 4.001439, G: 3.79063, G_recon: 0.00272, G_adv: 3.76343
+2022-04-16 16:11:50 - INFO - 
+Scale #3
+2022-04-16 16:11:50 - INFO - Iteration 0, D: 0.384628, D_r: 3.585736, D_f: -3.646048, D_gp: 4.449395, G: 4.01184, G_recon: 0.03175, G_adv: 3.69437
+2022-04-16 16:12:10 - INFO - Iteration 200, D: -0.247664, D_r: 2.331545, D_f: -2.685378, D_gp: 1.061694, G: 2.74462, G_recon: 0.00548, G_adv: 2.68981
+2022-04-16 16:12:29 - INFO - Iteration 400, D: -0.225335, D_r: 1.849969, D_f: -2.179079, D_gp: 1.037752, G: 2.22580, G_recon: 0.00438, G_adv: 2.18205
+2022-04-16 16:12:48 - INFO - Iteration 600, D: 0.008909, D_r: 1.300268, D_f: -1.636053, D_gp: 3.446937, G: 1.72506, G_recon: 0.00337, G_adv: 1.69131
+2022-04-16 16:13:07 - INFO - Iteration 800, D: -0.066432, D_r: 1.377952, D_f: -1.876906, D_gp: 4.325227, G: 2.02400, G_recon: 0.00449, G_adv: 1.97914
+2022-04-16 16:13:26 - INFO - Iteration 1000, D: -0.126019, D_r: 0.748571, D_f: -1.292649, D_gp: 4.180596, G: 1.41042, G_recon: 0.00290, G_adv: 1.38145
+2022-04-16 16:13:45 - INFO - Iteration 1200, D: -0.390458, D_r: 1.016026, D_f: -1.491795, D_gp: 0.853115, G: 1.59122, G_recon: 0.00276, G_adv: 1.56363
+2022-04-16 16:14:04 - INFO - Iteration 1400, D: -0.319858, D_r: 1.095202, D_f: -1.529999, D_gp: 1.149394, G: 1.56693, G_recon: 0.00280, G_adv: 1.53897
+2022-04-16 16:14:24 - INFO - Iteration 1600, D: -0.532609, D_r: 0.930167, D_f: -1.585683, D_gp: 1.229078, G: 1.67273, G_recon: 0.00292, G_adv: 1.64355
+2022-04-16 16:14:43 - INFO - Iteration 1800, D: -0.509343, D_r: 1.228535, D_f: -1.842790, D_gp: 1.049127, G: 1.93684, G_recon: 0.00270, G_adv: 1.90983
+2022-04-16 16:15:02 - INFO - Iteration 2000, D: -0.295681, D_r: 1.197202, D_f: -1.605320, D_gp: 1.124361, G: 1.68248, G_recon: 0.00324, G_adv: 1.65007
+2022-04-16 16:15:02 - INFO - 
+Scale #4
+2022-04-16 16:15:03 - INFO - Iteration 0, D: 0.081164, D_r: 1.604859, D_f: -1.690258, D_gp: 1.665640, G: 2.01868, G_recon: 0.03492, G_adv: 1.66951
+2022-04-16 16:15:27 - INFO - Iteration 200, D: -0.187334, D_r: 0.953370, D_f: -1.240360, D_gp: 0.996562, G: 1.29007, G_recon: 0.00533, G_adv: 1.23673
+2022-04-16 16:15:51 - INFO - Iteration 400, D: -0.185028, D_r: 0.703110, D_f: -1.003843, D_gp: 1.157053, G: 1.13072, G_recon: 0.00339, G_adv: 1.09686
+2022-04-16 16:16:17 - INFO - Iteration 600, D: -0.120965, D_r: 0.624172, D_f: -0.895645, D_gp: 1.505082, G: 0.96847, G_recon: 0.00352, G_adv: 0.93328
+2022-04-16 16:16:41 - INFO - Iteration 800, D: -0.153159, D_r: 0.322016, D_f: -0.535719, D_gp: 0.605447, G: 0.59681, G_recon: 0.00277, G_adv: 0.56907
+2022-04-16 16:17:05 - INFO - Iteration 1000, D: -0.286476, D_r: 0.303203, D_f: -0.678180, D_gp: 0.885002, G: 0.75063, G_recon: 0.00271, G_adv: 0.72353
+2022-04-16 16:17:33 - INFO - Iteration 1200, D: -0.125865, D_r: 0.132748, D_f: -0.388163, D_gp: 1.295503, G: 0.47260, G_recon: 0.00258, G_adv: 0.44684
+2022-04-16 16:18:06 - INFO - Iteration 1400, D: -0.197130, D_r: -0.010419, D_f: -0.291496, D_gp: 1.047848, G: 0.36783, G_recon: 0.00254, G_adv: 0.34243
+2022-04-16 16:18:31 - INFO - Iteration 1600, D: -0.319914, D_r: -0.008860, D_f: -0.400435, D_gp: 0.893803, G: 0.43733, G_recon: 0.00258, G_adv: 0.41153
+2022-04-16 16:18:55 - INFO - Iteration 1800, D: -0.236580, D_r: -0.211457, D_f: -0.097881, D_gp: 0.727575, G: 0.16802, G_recon: 0.00226, G_adv: 0.14539
+2022-04-16 16:19:19 - INFO - Iteration 2000, D: -0.328407, D_r: -0.476320, D_f: -0.025365, D_gp: 1.732778, G: 0.07543, G_recon: 0.00215, G_adv: 0.05392
+2022-04-16 16:19:19 - INFO - 
+Scale #5
+2022-04-16 16:19:23 - INFO - Iteration 0, D: 0.046409, D_r: -0.083531, D_f: 0.086935, D_gp: 0.430044, G: 0.76754, G_recon: 0.08238, G_adv: -0.05631
+2022-04-16 16:20:10 - INFO - Iteration 200, D: -0.043022, D_r: -0.151767, D_f: 0.082549, D_gp: 0.261969, G: -0.03746, G_recon: 0.00395, G_adv: -0.07693
+2022-04-16 16:20:56 - INFO - Iteration 400, D: -0.027937, D_r: -0.396345, D_f: 0.320594, D_gp: 0.478136, G: -0.25630, G_recon: 0.00464, G_adv: -0.30266
+2022-04-16 16:21:42 - INFO - Iteration 600, D: -0.077226, D_r: -0.260306, D_f: 0.105037, D_gp: 0.780428, G: -0.06617, G_recon: 0.00286, G_adv: -0.09480
+2022-04-16 16:22:41 - INFO - Iteration 800, D: -0.117326, D_r: -0.435105, D_f: 0.282791, D_gp: 0.349879, G: -0.24326, G_recon: 0.00321, G_adv: -0.27535
+2022-04-16 16:23:38 - INFO - Iteration 1000, D: -0.123083, D_r: -0.498375, D_f: 0.257980, D_gp: 1.173118, G: -0.10806, G_recon: 0.00341, G_adv: -0.14221
+2022-04-16 16:24:37 - INFO - Iteration 1200, D: -0.244796, D_r: -0.632472, D_f: 0.311318, D_gp: 0.763572, G: -0.19481, G_recon: 0.00267, G_adv: -0.22155
+2022-04-16 16:25:34 - INFO - Iteration 1400, D: -0.233661, D_r: -0.464909, D_f: 0.110081, D_gp: 1.211666, G: -0.04165, G_recon: 0.00247, G_adv: -0.06634
+2022-04-16 16:26:31 - INFO - Iteration 1600, D: -0.183444, D_r: -0.693291, D_f: 0.391368, D_gp: 1.184791, G: -0.36319, G_recon: 0.00183, G_adv: -0.38146
+2022-04-16 16:27:28 - INFO - Iteration 1800, D: -0.143505, D_r: -0.509771, D_f: 0.316434, D_gp: 0.498313, G: -0.28778, G_recon: 0.00226, G_adv: -0.31037
+2022-04-16 16:28:26 - INFO - Iteration 2000, D: -0.297165, D_r: -0.646027, D_f: 0.265911, D_gp: 0.829512, G: -0.14057, G_recon: 0.00259, G_adv: -0.16650
+2022-04-16 16:28:27 - INFO - 
+Scale #6
+2022-04-16 16:28:31 - INFO - Iteration 0, D: 0.075405, D_r: -0.239107, D_f: 0.197287, D_gp: 1.172249, G: -0.04220, G_recon: 0.01842, G_adv: -0.22639
+2022-04-16 16:29:58 - INFO - Iteration 200, D: -0.143584, D_r: -0.383165, D_f: 0.151845, D_gp: 0.877368, G: -0.09968, G_recon: 0.00330, G_adv: -0.13269
+2022-04-16 16:31:27 - INFO - Iteration 400, D: -0.087440, D_r: -0.535056, D_f: 0.369754, D_gp: 0.778614, G: -0.28979, G_recon: 0.00286, G_adv: -0.31836
+2022-04-16 16:32:57 - INFO - Iteration 600, D: -0.179370, D_r: -0.550935, D_f: 0.275395, D_gp: 0.961709, G: -0.24579, G_recon: 0.00225, G_adv: -0.26829
+2022-04-16 16:34:30 - INFO - Iteration 800, D: -0.241927, D_r: -0.761981, D_f: 0.446626, D_gp: 0.734274, G: -0.36732, G_recon: 0.00195, G_adv: -0.38680
+2022-04-16 16:36:01 - INFO - Iteration 1000, D: -0.091043, D_r: -0.631967, D_f: 0.343626, D_gp: 1.972977, G: -0.23888, G_recon: 0.00272, G_adv: -0.26608
+2022-04-16 16:37:35 - INFO - Iteration 1200, D: -0.316396, D_r: -0.702063, D_f: 0.322157, D_gp: 0.635109, G: -0.26948, G_recon: 0.00162, G_adv: -0.28566
+2022-04-16 16:39:05 - INFO - Iteration 1400, D: -0.139954, D_r: -0.662891, D_f: 0.342961, D_gp: 1.799758, G: -0.35778, G_recon: 0.00258, G_adv: -0.38355
+2022-04-16 16:40:38 - INFO - Iteration 1600, D: -0.182879, D_r: -0.479343, D_f: 0.242925, D_gp: 0.535382, G: -0.21178, G_recon: 0.00180, G_adv: -0.22977
+2022-04-16 16:41:51 - INFO - Iteration 1800, D: -0.176992, D_r: -0.661134, D_f: 0.385593, D_gp: 0.985495, G: -0.32718, G_recon: 0.00226, G_adv: -0.34974
+2022-04-16 16:43:03 - INFO - Iteration 2000, D: -0.000986, D_r: -0.687294, D_f: 0.373585, D_gp: 3.127230, G: -0.33412, G_recon: 0.00162, G_adv: -0.35031
+2022-04-16 16:43:04 - INFO - 
+Scale #7
+2022-04-16 16:43:07 - INFO - Iteration 0, D: 0.075510, D_r: -0.345533, D_f: 0.341028, D_gp: 0.800154, G: -0.19798, G_recon: 0.01144, G_adv: -0.31236
+2022-04-16 16:45:00 - INFO - Iteration 200, D: -0.071335, D_r: -0.519871, D_f: 0.407244, D_gp: 0.412922, G: -0.34581, G_recon: 0.00279, G_adv: -0.37370
+2022-04-16 16:46:53 - INFO - Iteration 400, D: -0.072619, D_r: -0.573711, D_f: 0.457138, D_gp: 0.439544, G: -0.43143, G_recon: 0.00192, G_adv: -0.45063
+2022-04-16 16:48:54 - INFO - Iteration 600, D: -0.133008, D_r: -0.811408, D_f: 0.632922, D_gp: 0.454779, G: -0.59718, G_recon: 0.00199, G_adv: -0.61713
+2022-04-16 16:51:01 - INFO - Iteration 800, D: -0.112153, D_r: -0.880669, D_f: 0.689712, D_gp: 0.788044, G: -0.63781, G_recon: 0.00177, G_adv: -0.65555
+2022-04-16 16:52:56 - INFO - Iteration 1000, D: -0.138357, D_r: -0.931381, D_f: 0.693890, D_gp: 0.991345, G: -0.67545, G_recon: 0.00185, G_adv: -0.69398
+2022-04-16 16:54:52 - INFO - Iteration 1200, D: -0.066339, D_r: -0.902014, D_f: 0.732415, D_gp: 1.032602, G: -0.75178, G_recon: 0.00188, G_adv: -0.77060
+2022-04-16 16:56:49 - INFO - Iteration 1400, D: -0.148753, D_r: -0.917966, D_f: 0.729733, D_gp: 0.394802, G: -0.71330, G_recon: 0.00153, G_adv: -0.72860
+2022-04-16 16:58:48 - INFO - Iteration 1600, D: 0.018173, D_r: -1.011435, D_f: 0.738784, D_gp: 2.908235, G: -0.69595, G_recon: 0.00232, G_adv: -0.71919
+2022-04-16 17:00:45 - INFO - Iteration 1800, D: -0.124613, D_r: -1.050799, D_f: 0.865102, D_gp: 0.610850, G: -0.81290, G_recon: 0.00219, G_adv: -0.83475
+2022-04-16 17:02:41 - INFO - Iteration 2000, D: -0.100528, D_r: -0.938460, D_f: 0.752253, D_gp: 0.856793, G: -0.74969, G_recon: 0.00170, G_adv: -0.76666
+2022-04-16 17:02:42 - INFO - 
+Scale #8
+2022-04-16 17:02:45 - INFO - Iteration 0, D: 0.025047, D_r: -0.749798, D_f: 0.722421, D_gp: 0.524236, G: -0.39394, G_recon: 0.02962, G_adv: -0.69011
+2022-04-16 17:06:04 - INFO - Iteration 200, D: -0.106637, D_r: -0.954319, D_f: 0.814026, D_gp: 0.336554, G: -0.73494, G_recon: 0.00383, G_adv: -0.77327
+2022-04-16 17:09:25 - INFO - Iteration 400, D: -0.093247, D_r: -0.929969, D_f: 0.802356, D_gp: 0.343662, G: -0.73172, G_recon: 0.00325, G_adv: -0.76420
+2022-04-16 17:12:46 - INFO - Iteration 600, D: -0.071902, D_r: -1.144571, D_f: 1.014573, D_gp: 0.580958, G: -0.98672, G_recon: 0.00236, G_adv: -1.01035
+2022-04-16 17:16:06 - INFO - Iteration 800, D: -0.134243, D_r: -1.176860, D_f: 1.002270, D_gp: 0.403466, G: -0.96185, G_recon: 0.00235, G_adv: -0.98540
+2022-04-16 17:19:16 - INFO - Iteration 1000, D: -0.163199, D_r: -1.278152, D_f: 1.085195, D_gp: 0.297591, G: -1.03599, G_recon: 0.00244, G_adv: -1.06039
+2022-04-16 17:22:19 - INFO - Iteration 1200, D: -0.165127, D_r: -1.230417, D_f: 1.005630, D_gp: 0.596595, G: -0.98233, G_recon: 0.00255, G_adv: -1.00785
+2022-04-16 17:25:21 - INFO - Iteration 1400, D: -0.144951, D_r: -1.158830, D_f: 0.946032, D_gp: 0.678473, G: -0.91128, G_recon: 0.00233, G_adv: -0.93458
+2022-04-16 17:28:28 - INFO - Iteration 1600, D: -0.146162, D_r: -1.224623, D_f: 1.027766, D_gp: 0.506954, G: -0.99216, G_recon: 0.00210, G_adv: -1.01316
+2022-04-16 17:31:34 - INFO - Iteration 1800, D: -0.085489, D_r: -1.286108, D_f: 1.126550, D_gp: 0.740696, G: -1.14756, G_recon: 0.00193, G_adv: -1.16689
+2022-04-16 17:34:38 - INFO - Iteration 2000, D: -0.076535, D_r: -1.108424, D_f: 0.991104, D_gp: 0.407856, G: -0.96999, G_recon: 0.00221, G_adv: -0.99207
+2022-04-16 17:34:39 - INFO - 
+Scale #9
+2022-04-16 17:34:51 - INFO - Iteration 0, D: 0.039891, D_r: -0.011573, D_f: 0.021786, D_gp: 0.296779, G: 1.74478, G_recon: 0.16762, G_adv: 0.06861
+2022-04-16 17:45:20 - INFO - Iteration 200, D: -0.002438, D_r: -0.153960, D_f: 0.112716, D_gp: 0.388057, G: -0.02697, G_recon: 0.01187, G_adv: -0.14569
+2022-04-16 17:55:39 - INFO - Iteration 400, D: 0.037776, D_r: 0.027673, D_f: -0.020142, D_gp: 0.302446, G: 0.14039, G_recon: 0.00577, G_adv: 0.08273
+2022-04-16 18:05:58 - INFO - Iteration 600, D: -0.060192, D_r: -0.441289, D_f: 0.321102, D_gp: 0.599947, G: -0.22894, G_recon: 0.00979, G_adv: -0.32686
+2022-04-16 18:16:17 - INFO - Iteration 800, D: 0.027227, D_r: -0.081989, D_f: 0.055526, D_gp: 0.536898, G: -0.01282, G_recon: 0.00580, G_adv: -0.07087
+2022-04-16 18:26:41 - INFO - Iteration 1000, D: -0.016170, D_r: -0.155283, D_f: 0.117198, D_gp: 0.219148, G: -0.06638, G_recon: 0.00455, G_adv: -0.11183
+2022-04-16 18:37:00 - INFO - Iteration 1200, D: -0.075439, D_r: -0.593079, D_f: 0.485779, D_gp: 0.318614, G: -0.27519, G_recon: 0.01174, G_adv: -0.39259
+2022-04-16 18:47:18 - INFO - Iteration 1400, D: -0.052922, D_r: -0.210163, D_f: 0.137045, D_gp: 0.201962, G: -0.11008, G_recon: 0.00272, G_adv: -0.13724
+2022-04-16 18:57:34 - INFO - Iteration 1600, D: -0.014997, D_r: -0.274908, D_f: 0.223731, D_gp: 0.361804, G: -0.16910, G_recon: 0.00355, G_adv: -0.20459
+2022-04-16 19:07:39 - INFO - Iteration 1800, D: 0.035054, D_r: -0.512963, D_f: 0.447766, D_gp: 1.002517, G: -0.32806, G_recon: 0.00346, G_adv: -0.36262
+2022-04-16 19:17:23 - INFO - Iteration 2000, D: -0.024106, D_r: -0.623242, D_f: 0.574548, D_gp: 0.245873, G: -0.46006, G_recon: 0.00411, G_adv: -0.50115
+2022-04-16 19:17:24 - INFO - 
+Scales:
+2022-04-16 19:17:24 - INFO - s0, size: 25x34, amp: 1.000
+2022-04-16 19:17:24 - INFO - s1, size: 33x43, amp: 0.011
+2022-04-16 19:17:24 - INFO - s2, size: 42x56, amp: 0.012
+2022-04-16 19:17:24 - INFO - s3, size: 54x71, amp: 0.011
+2022-04-16 19:17:24 - INFO - s4, size: 69x91, amp: 0.013
+2022-04-16 19:17:24 - INFO - s5, size: 88x117, amp: 0.013
+2022-04-16 19:17:24 - INFO - s6, size: 113x151, amp: 0.013
+2022-04-16 19:17:24 - INFO - s7, size: 145x193, amp: 0.018
+2022-04-16 19:17:24 - INFO - s8, size: 186x248, amp: 0.017
