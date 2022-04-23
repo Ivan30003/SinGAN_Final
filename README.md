@@ -9,7 +9,7 @@ git clone https://github.com/Ivan30003/SinGAN_Final
 ```
 Set directory to repository directory (or print directory manually):
 ```
-cd ./SinGAN/
+cd ./SinGAN_Final/
 ```
 ## Installing dependecies
 This code was tested and checked with pytorch version 1.8.1. \
