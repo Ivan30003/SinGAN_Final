@@ -15,7 +15,7 @@ cd /SinGAN_Final
 ## Docker
 Build docker image:
 ```
-docker build -t SinGAN_36 .
+docker build -t singan_36 .
 ```
 Run it with (both tests will be launched):
 ```
