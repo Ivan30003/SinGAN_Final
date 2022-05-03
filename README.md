@@ -1,5 +1,6 @@
 # SinGAN_Final
 ## Requirements
+At least 8 GB free space (12GB recommended)
 Ubuntu 20.04
 
 ## Preparing
