@@ -22,8 +22,11 @@ Run it with (both tests will be launched):
 docker run <container_id>
 ```
 ## Watch images
+to know the container_id, write:
+```
+docker ps -a
+```
 To copy images from container to your machine:
 ```
 docker cp <container_id>: results <path_on_your_machine>
 ```
-
