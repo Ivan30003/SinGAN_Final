@@ -1,7 +1,7 @@
 # SinGAN_Final
 ## Requirements
+Ubuntu 20.04 \
 At least 9 GB free space (12GB recommended)
-Ubuntu 20.04
 
 ## Preparing
 Firstly, clone repository:
